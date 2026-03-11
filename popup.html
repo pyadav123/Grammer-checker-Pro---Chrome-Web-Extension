@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grammar Checker Pro</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <div class="logo">
+          <span class="logo-icon">✍️</span>
+          <div class="logo-text">
+            <h1>Grammar Checker</h1>
+            <p>Powered by LanguageTool</p>
+          </div>
+        </div>
+        <div class="status-badge" id="statusBadge">
+          <span class="status-dot"></span>
+          <span>Active</span>
+        </div>
+      </div>
+
+      <!-- Stats Cards -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number" id="errorsFound">0</div>
+          <div class="stat-label">Issues Found</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="correctionsMade">0</div>
+          <div class="stat-label">Corrections</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="pagesChecked">0</div>
+          <div class="stat-label">Pages Checked</div>
+        </div>
+      </div>
+
+      <!-- Current Page Check -->
+      <div class="section">
+        <div class="section-title">Current Page Status</div>
+        <div class="page-status" id="pageStatus">
+          <div class="page-status-icon">📄</div>
+          <div class="page-status-text">
+            <span id="pageStatusTitle">Ready to check</span>
+            <span id="pageStatusSub">Click in any text field to start</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings -->
+      <div class="section">
+        <div class="section-title">Settings</div>
+
+        <div class="setting-item">
+          <div class="setting-info">
+            <span class="setting-name">Auto Check</span>
+            <span class="setting-desc">Check while typing</span>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" id="autoCheck" checked />
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+
+        <div class="setting-item">
+          <div class="setting-info">
+            <span class="setting-name">Show Suggestions</span>
+            <span class="setting-desc">Display fix suggestions</span>
+          </div>
+          <label class="toggle">
+            <input type="checkbox" id="showSuggestions" checked />
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+
+        <div class="setting-item">
+          <div class="setting-info">
+            <span class="setting-name">Language</span>
+          </div>
+          <select class="lang-select" id="languageSelect">
+            <option value="en-US">English (US)</option>
+            <option value="en-GB">English (UK)</option>
+            <option value="de-DE">German</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Check Now Button -->
+      <button class="check-btn" id="checkNowBtn">
+        <span>🔍</span> Check Current Page
+      </button>
+
+      <!-- Footer -->
+      <div class="footer">
+        <span>Grammar Checker Pro v1.0</span>
+        <span>•</span>
+        <a href="#" id="clearStats">Clear Stats</a>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
